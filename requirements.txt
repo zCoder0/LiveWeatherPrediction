@@ -8,5 +8,5 @@ pandas
 streamlit
 matplotlib
 seaborn
-twilo
+twilio
 streamlit-js-eval
