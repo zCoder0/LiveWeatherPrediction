@@ -89,7 +89,7 @@ if location_input:
         st.subheader(f"{current['condition']['text']}")
 
         # ✅ Send SMS based on weather condition
-        send_msg(current['condition']['text'] ,location=location_input)
+        #send_msg(current['condition']['text'] ,location=location_input)
 
         # 📊 Dashboard logic
         db = Dashboard()
