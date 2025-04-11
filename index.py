@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import datetime as dt
+import time
 import os
 import requests
 import matplotlib.pyplot as plt
@@ -11,7 +12,7 @@ from twilio.rest import Client
 # Load API Key
 load_dotenv()
 api_key = os.getenv("API_KEY")
-api_key = "baadbd9843734bd78c074200250504"  # Use your API
+api_key = "baadbd9843734bd78c074200250504"  # Replace with your API key
 
 # Streamlit Page Config
 st.set_page_config(page_title="🌤️ Weather Dashboard", layout="centered")
@@ -23,7 +24,7 @@ st.markdown("Enter a location to get the current weather update!")
 # 🔍 Search Box for Location
 location_input = st.text_input("📍 Enter Location", value="Thanjavur")
 
-# Function to fetch current weather
+# Load current weather
 def load_current(location):
     url = f"http://api.weatherapi.com/v1/current.json?key={api_key}&q={location}&aqi=yes"
     response = requests.get(url)
@@ -33,10 +34,9 @@ def load_current(location):
     else:
         return None, None
 
-# ✅ Function to send weather SMS
-def send_msg(condition,location):
+# Function to send SMS based on condition
+def send_msg(condition):
     try:
-        # Twilio credentials
         account_sid = "AC46555440f85435feecf54bc4f3640e65"
         auth_token = "37ae11a72e40a71356a2ec9af38ef04d"
         twilio_number = "+13075561605"  # Replace with your Twilio number
@@ -44,29 +44,21 @@ def send_msg(condition,location):
 
         client = Client(account_sid, auth_token)
 
-        # Customize the message based on condition
-        if "rain" in condition.lower():
-            message_text = "☔ Hey bro, it's raining outside. Stay safe and carry an umbrella!"
-        elif "sunny" in condition.lower():
-            message_text = "☀️ Hey bro, it's sunny outside. Enjoy the weather!"
-        elif "cloud" in condition.lower():
-            message_text = "🌥️ It's cloudy today. A perfect day for a walk!"
-        elif "clear" in condition.lower():
-            message_text = "🌞 Clear skies today. Have a great day ahead!"
+        if condition == "Rain":
+            message_body = "Hey bro, it's raining outside. Stay safe and carry an umbrella."
+        elif condition == "Sunny":
+            message_body = "Hey bro, it's sunny outside. Enjoy the weather."
         else:
-            message_text = f"🌤️ Current weather condition: {condition}"
+            message_body = f"Hey bro, current weather condition: {condition}"
 
         message = client.messages.create(
-            body=message_text +"Location : "+ location,
+            body=message_body,
             from_=twilio_number,
             to=to_number
         )
-
-        print("✅ Message sent successfully!")
         print("Message SID:", message.sid)
-
     except Exception as e:
-        print(f"❌ Error sending message: {e}")
+        print(f"Error sending message: {e}")
 
 # Main UI
 if location_input:
@@ -88,8 +80,14 @@ if location_input:
         st.image(f"https:{current['condition']['icon']}", width=100)
         st.subheader(f"{current['condition']['text']}")
 
-        # ✅ Send SMS based on weather condition
-        #send_msg(current['condition']['text'] ,location=location_input)
+        # ✅ Send SMS once per hour
+        current_time = time.time()
+        if 'last_sent_time' not in st.session_state:
+            st.session_state.last_sent_time = 0
+
+        if current_time - st.session_state.last_sent_time >= 3600:
+            send_msg(current['condition']['text'])
+            st.session_state.last_sent_time = current_time
 
         # 📊 Dashboard logic
         db = Dashboard()
