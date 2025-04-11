@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: Weather-Prediction
+Version: 1.0
+Author: Prem Raj
+Author-email: rajp37590@gmail.com
+Requires-Dist: requests
+Requires-Dist: datetime
+Requires-Dist: scikit-learn
+Requires-Dist: tensorflow
+Requires-Dist: keras
+Requires-Dist: python-dotenv
+Requires-Dist: pandas
+Requires-Dist: streamlit
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: twilio
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist

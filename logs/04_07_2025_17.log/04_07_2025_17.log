@@ -1,0 +1,8 @@
+[ 2025-04-07 17:47:12,817 ] 6 root - INFO - hi
+[ 2025-04-07 17:47:35,676 ] 6 root - INFO - hi
+[ 2025-04-07 17:47:35,676 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 8 error messgae division by zero
+[ 2025-04-07 17:51:57,062 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 8 error messgae division by zero
+[ 2025-04-07 17:52:11,199 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 8 error messgae division by zero
+[ 2025-04-07 17:59:24,815 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 8 error messgae DataIntegstion.__init__() missing 1 required positional argument: 'api_key'
+[ 2025-04-07 17:59:39,307 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\src\components\data_integstion.py on line number 43 error messgae I/O operation on closed file.
+[ 2025-04-07 17:59:39,308 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 9 error messgae name 'locatiom' is not defined

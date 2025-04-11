@@ -1,0 +1,22 @@
+[ 2025-04-08 12:37:08,359 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 11 error messgae Preprocessing.get_columns_name() missing 1 required positional argument: 'df'
+[ 2025-04-08 12:39:03,859 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\src\components\preprocessing.py on line number 41 error messgae time data "13-04-2024" doesn't match format "%m-%d-%Y", at position 7. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+[ 2025-04-08 12:39:03,860 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 13 error messgae 'NoneType' object has no attribute 'head'
+[ 2025-04-08 12:39:36,799 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\src\components\preprocessing.py on line number 42 error messgae time data "13-04-2024" doesn't match format "%m-%d-%Y", at position 7. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+[ 2025-04-08 12:39:36,799 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 13 error messgae 'NoneType' object has no attribute 'head'
+[ 2025-04-08 12:44:12,826 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\src\components\preprocessing.py on line number 47 error messgae 'Temperature (°F)'
+[ 2025-04-08 12:44:12,827 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 15 error messgae 'NoneType' object has no attribute 'head'
+[ 2025-04-08 12:44:59,654 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\src\components\preprocessing.py on line number 47 error messgae 'Temperature (°F)'
+[ 2025-04-08 12:44:59,654 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 15 error messgae 'NoneType' object has no attribute 'head'
+[ 2025-04-08 12:50:26,090 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 16 error messgae Preprocessing.select_features() missing 1 required positional argument: 'features'
+[ 2025-04-08 12:51:00,440 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\src\components\preprocessing.py on line number 53 error messgae "['Temperature (°C)'] not in index"
+[ 2025-04-08 12:51:00,440 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 17 error messgae 'NoneType' object has no attribute 'head'
+[ 2025-04-08 12:51:29,885 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\src\components\preprocessing.py on line number 53 error messgae "['Temperature (°C)'] not in index"
+[ 2025-04-08 12:51:29,885 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 17 error messgae 'NoneType' object has no attribute 'head'
+[ 2025-04-08 12:59:52,027 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\src\components\preprocessing.py on line number 55 error messgae "['Temperature (°C)'] not in index"
+[ 2025-04-08 12:59:52,028 ] 14 root - INFO - Error occured in python script name at G:\RealtimeProjects\LiveWeatherPrediction\main.py on line number 19 error messgae 'NoneType' object has no attribute 'columns'

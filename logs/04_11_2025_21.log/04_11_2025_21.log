@@ -1,0 +1,11 @@
+[ 2025-04-11 21:13:19,042 ] 56 twilio.http_client - INFO - -- BEGIN Twilio API Request --
+[ 2025-04-11 21:13:19,072 ] 66 twilio.http_client - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC46555440f85435feecf54bc4f3640e65/Messages.json
+[ 2025-04-11 21:13:19,072 ] 69 twilio.http_client - INFO - Headers:
+[ 2025-04-11 21:13:19,072 ] 73 twilio.http_client - INFO - Content-Type : application/x-www-form-urlencoded
+[ 2025-04-11 21:13:19,072 ] 73 twilio.http_client - INFO - Accept : application/json
+[ 2025-04-11 21:13:19,072 ] 73 twilio.http_client - INFO - User-Agent : twilio-python/9.5.2 (Windows AMD64) Python/3.11.0
+[ 2025-04-11 21:13:19,072 ] 73 twilio.http_client - INFO - X-Twilio-Client : python-9.5.2
+[ 2025-04-11 21:13:19,072 ] 73 twilio.http_client - INFO - Accept-Charset : utf-8
+[ 2025-04-11 21:13:19,072 ] 75 twilio.http_client - INFO - -- END Twilio API Request --
+[ 2025-04-11 21:13:19,615 ] 81 twilio.http_client - INFO - Response Status Code: 201
+[ 2025-04-11 21:13:19,615 ] 82 twilio.http_client - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '893', 'Connection': 'keep-alive', 'Date': 'Fri, 11 Apr 2025 15:43:19 GMT', 'X-Powered-By': 'AT-5000', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQf4d28dc495ebe53842494ac14598f12c', 'Twilio-Request-Duration': '0.133', 'X-Home-Region': 'us1', 'X-Api-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key, X-Pre-Auth-Context, X-Target-Region', 'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag, Twilio-Request-Id', 'Access-Control-Allow-Credentials': 'true', 'X-Shenanigans': 'none', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 d2bf6e8429807ec6b44496cc5ab410ae.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'MAA51-P3', 'X-Amz-Cf-Id': 'rd30KekS9nim6RMJFpiL6tsOgamTI-6e0ZaJl6nLktLn25IgJitFzA=='}
