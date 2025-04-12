@@ -81,16 +81,19 @@ if location_input:
         st.image(f"https:{current['condition']['icon']}", width=100)
         st.subheader(f"{current['condition']['text']}")
 
-        # ✅ Send SMS once per hour
-        current_time = time.time()
-        if 'last_sent_time' not in st.session_state:
-            st.session_state.last_sent_time = 0
+       # ✅ Send SMS only when condition changes
+        current_condition = current['condition']['text']
 
-        if current_time - st.session_state.last_sent_time >= 3600:
-    
-            send_msg(current['condition']['text'])
-            st.session_state.last_sent_time = current_time
-            st.markdown(f"Last send Time  {st.session_state.last_sent_time}")
+        if 'last_condition' not in st.session_state:
+            st.session_state.last_condition = ""
+
+        if current_condition != st.session_state.last_condition:
+            send_msg(current_condition)
+            st.session_state.last_condition = current_condition
+            st.markdown(f"📤 SMS sent for new condition: **{current_condition}**")
+        else:
+            st.markdown(f"📨 No SMS sent. Weather is still **{current_condition}**")
+
 
         # 📊 Dashboard logic
         db = Dashboard()
