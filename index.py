@@ -70,6 +70,7 @@ def send_msg(condition):
         )
         print("Message SID:", message.sid)
     except Exception as e:
+        st.markdown(f"Error sending message : {e}")
         print(f"Error sending message: {e}")
 
 # Send only once every hour
