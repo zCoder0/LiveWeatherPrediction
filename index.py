@@ -37,6 +37,7 @@ def load_current(location):
 # Function to send SMS based on condition
 def send_msg(condition,location):
     try:
+        site="https://liveweatherprediction.streamlit.app/"
         account_sid = "AC46555440f85435feecf54bc4f3640e65"
         auth_token = "37ae11a72e40a71356a2ec9af38ef04d"
         twilio_number = "+13075561605"  # Replace with your Twilio number
@@ -52,7 +53,7 @@ def send_msg(condition,location):
             message_body = f"Hey bro, current weather condition: {condition}"
 
         message = client.messages.create(
-            body=message_body+"\n Location : "+location,
+            body=message_body+"\n Location : "+location+"\n go and visite "+site,
             from_=twilio_number,
             to=to_number
         )
