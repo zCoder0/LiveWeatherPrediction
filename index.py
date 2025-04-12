@@ -90,7 +90,7 @@ if location_input:
     
             send_msg(current['condition']['text'])
             st.session_state.last_sent_time = current_time
-            st.markdown(f"Last send Time " {st.session_state.last_sent_time})
+            st.markdown(f"Last send Time  {st.session_state.last_sent_time}")
 
         # 📊 Dashboard logic
         db = Dashboard()
