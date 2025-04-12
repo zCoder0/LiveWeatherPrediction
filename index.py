@@ -99,9 +99,9 @@ if location_input:
         st.image(f"https:{current['condition']['icon']}", width=100)
         st.subheader(f"{current['condition']['text']}")
 
-        if should_send_message():
-            send_msg(current['condition']['text'])
-
+        #if should_send_message():
+        #    send_msg(current['condition']['text'])
+        send_msg(current['conditon']['text'])
         # Dashboard visualizations
         db = Dashboard()
         morning_mean, afternoon_mean, evening_mean, night_mean = db.call(location_input)
