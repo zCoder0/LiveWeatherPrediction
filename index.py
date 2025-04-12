@@ -39,7 +39,7 @@ def send_msg(condition,location):
     try:
         site="https://liveweatherprediction.streamlit.app/"
         account_sid = "ACbd0f374e74d9edb3b8fff4d59291e318"
-        auth_token = "2e0f73a669816dea164fcd226e624a03"
+        auth_token = "86bc66dbe0cad05deeaad2475cafceee"
         twilio_number = "+12313993847"  # Replace with your Twilio number
         to_number = "+918072620523"     # Your verified number
 
@@ -53,7 +53,7 @@ def send_msg(condition,location):
             message_body = f"Hey bro, current weather condition: {condition}"
 
         message = client.messages.create(
-            body=message_body+"\n Location : "+location,
+            body=message_body+"\n Location : "+location+" go and visite "+site,
             from_=twilio_number,
             to=to_number
         )
