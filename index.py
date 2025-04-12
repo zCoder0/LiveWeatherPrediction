@@ -101,7 +101,7 @@ if location_input:
 
         #if should_send_message():
         #    send_msg(current['condition']['text'])
-        send_msg(current['conditon']['text'])
+        send_msg(current['condition']['text'])
         # Dashboard visualizations
         db = Dashboard()
         morning_mean, afternoon_mean, evening_mean, night_mean = db.call(location_input)
