@@ -53,7 +53,7 @@ def send_msg(condition,location):
             message_body = f"Hey bro, current weather condition: {condition}"
 
         message = client.messages.create(
-            body=message_body+"\n Location : "+location+"\n go and visite "+site,
+            body=message_body+"\n Location : "+location,
             from_=twilio_number,
             to=to_number
         )
