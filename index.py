@@ -38,9 +38,9 @@ def load_current(location):
 def send_msg(condition,location):
     try:
         site="https://liveweatherprediction.streamlit.app/"
-        account_sid = "AC46555440f85435feecf54bc4f3640e65"
-        auth_token = "37ae11a72e40a71356a2ec9af38ef04d"
-        twilio_number = "+13075561605"  # Replace with your Twilio number
+        account_sid = "ACbd0f374e74d9edb3b8fff4d59291e318"
+        auth_token = "2e0f73a669816dea164fcd226e624a03"
+        twilio_number = "+12313993847"  # Replace with your Twilio number
         to_number = "+918072620523"     # Your verified number
 
         client = Client(account_sid, auth_token)
