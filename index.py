@@ -35,7 +35,7 @@ def load_current(location):
         return None, None
 
 # Function to send SMS based on condition
-def send_msg(condition):
+def send_msg(condition,location):
     try:
         account_sid = "AC46555440f85435feecf54bc4f3640e65"
         auth_token = "37ae11a72e40a71356a2ec9af38ef04d"
@@ -52,7 +52,7 @@ def send_msg(condition):
             message_body = f"Hey bro, current weather condition: {condition}"
 
         message = client.messages.create(
-            body=message_body,
+            body=message_body+"\n Location : "+location,
             from_=twilio_number,
             to=to_number
         )
@@ -88,7 +88,7 @@ if location_input:
             st.session_state.last_condition = ""
 
         if current_condition != st.session_state.last_condition:
-            send_msg(current_condition)
+            send_msg(current_condition,location['name'])
             st.session_state.last_condition = current_condition
             st.markdown(f"📤 SMS sent for new condition: **{current_condition}**")
         else:
