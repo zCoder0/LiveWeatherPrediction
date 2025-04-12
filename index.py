@@ -87,8 +87,10 @@ if location_input:
             st.session_state.last_sent_time = 0
 
         if current_time - st.session_state.last_sent_time >= 3600:
+    
             send_msg(current['condition']['text'])
             st.session_state.last_sent_time = current_time
+            st.markdown(f"Last send Time " {st.session_state.last_sent_time})
 
         # 📊 Dashboard logic
         db = Dashboard()
